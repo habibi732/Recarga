@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-<title>Consigue Monedas - USD</title>
+<title>Get Coins - USD</title>
 <style>
   :root{
     --bg:#f6f6f6; --card:#fff; --accent:#ff4966; --muted:#9b9b9b;
@@ -85,10 +85,10 @@
 <body>
 <div class="app" id="app">
   <header>
-    <h1>Consigue Monedas</h1>
+    <h1>Get Coins </h1>
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Escribe un nombre..." />
-      <button id="searchBtn">Buscar</button>
+      <input type="text" id="searchInput" placeholder="Write a name..." />
+      <button id="searchBtn">Look for</button>
     </div>
   </header>
 
@@ -103,12 +103,14 @@
     </div>
 
     <div class="section">
-      <div style="font-weight:700;">Recarga</div>
-      <div class="small" style="margin-top:6px;color:#ff4959;">Ahorra un 25 % con una tarifa de servicio de terceros más baja.</div>
+      <div style="font-weight:700;">Recharge</div>
+      <div class="small" style="margin-top:6px;color:#ff4959;">Save 25% with a lower third-party service fee.
+</div>
 
       <div class="row" style="margin-top:14px;">
-        <div class="small">Oferta especial</div>
-        <div style="color:var(--accent);font-weight:700;">Desbloquea un reembolso del 5 %</div>
+        <div class="small">Special offer
+</div>
+        <div style="color:var(--accent);font-weight:700;">Unlock a 5% refund</div>
       </div>
 
       <div class="options" id="options">
@@ -117,7 +119,7 @@
         <div class="opt" data-coins="2500" data-price="27.5"><div class="coins"><img src="https://i.postimg.cc/2bdrvvCH/moneda.webp" alt="">2,500</div><div class="price">USD 27.50</div></div>
         <div class="opt" data-coins="4500" data-price="49.5"><div class="coins"><img src="https://i.postimg.cc/2bdrvvCH/moneda.webp" alt="">4,500</div><div class="price">USD 49.50</div></div>
         <div class="opt" data-coins="6000" data-price="66"><div class="coins"><img src="https://i.postimg.cc/2bdrvvCH/moneda.webp" alt="">6,000</div><div class="price">USD 66.00</div></div>
-        <div class="opt" id="customBtn" style="font-weight:700;">Personalizar</div>
+        <div class="opt" id="customBtn" style="font-weight:700;">Personalize</div>
       </div>
     </div>
   </main>
@@ -126,11 +128,11 @@
     <div style="max-width:420px;margin:0 auto;">
       <div style="background:#fff;padding:12px;border-radius:12px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;">
         <div>
-          <div style="font-weight:700;" id="selectedCoinsLabel">30 Monedas</div>
+          <div style="font-weight:700;" id="selectedCoinsLabel">30 Coins</div>
           <div class="small">USD <span id="selectedPrice">0.33</span></div>
         </div>
         <div style="width:58%;">
-          <button class="btn" id="buyBtn"><img src="https://i.postimg.cc/2bdrvvCH/moneda.webp" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Comprar por USD 0.33</button>
+          <button class="btn" id="buyBtn"><img src="https://i.postimg.cc/2bdrvvCH/moneda.webp" alt="" style="width:18px;vertical-align:middle;margin-right:6px;">Buy by USD 0.33</button>
         </div>
       </div>
     </div>
@@ -142,10 +144,10 @@
   <div class="sheet">
     <div style="display:flex;align-items:center;gap:8px;">
       <button id="closeCustom" class="btn secondary" style="width:auto;">←</button>
-      <div style="font-weight:700;font-size:18px;">Personalizado</div>
+      <div style="font-weight:700;font-size:18px;">Personalize</div>
     </div>
     <div style="margin-top:12px;">
-      <div style="font-size:14px;color:var(--muted);">Número de Monedas</div>
+      <div style="font-size:14px;color:var(--muted);">Number of Coins</div>
       <div id="customCoinsDisplay" style="font-size:28px;font-weight:800;margin-top:4px;">0</div>
       <div id="customPriceDisplay" class="small" style="margin-top:4px;">USD 0.00</div>
     </div>
@@ -155,7 +157,7 @@
       <div class="key">7</div><div class="key">8</div><div class="key">9</div>
       <div class="key" id="delKey">⌫</div><div class="key">0</div><div class="key">000</div>
     </div>
-    <button class="btn" id="confirmCustom" style="margin-top:14px;">Recargar</button>
+    <button class="btn" id="confirmCustom" style="margin-top:14px;">Recharge</button>
   </div>
 </div>
 
@@ -163,18 +165,18 @@
 <div class="screen" id="summaryScreen">
   <div class="sheet">
     <button id="closeSummary" class="btn secondary" style="width:auto;padding:6px 10px;font-size:14px;">←</button>
-    <h3 style="text-align:center;margin:10px 0;">Resumen del pedido</h3>
+    <h3 style="text-align:center;margin:10px 0;">Order Summary</h3>
     <div style="background:#f9f9f9;padding:10px;border-radius:10px;margin-top:8px;">
-      <strong>Cuenta:</strong> <span id="summaryUser"></span><br>
-      <strong>Compra de:</strong> <span id="summaryCoins"></span> Monedas<br>
+      <strong>Account:</strong> <span id="summaryUser"></span><br>
+      <strong>Purchase of:</strong> <span id="summaryCoins"></span> Coins<br>
       <strong>USD </strong><span id="summaryPrice"></span>
     </div>
-    <div style="margin-top:14px;font-weight:700;">Método de pago</div>
+    <div style="margin-top:14px;font-weight:700;">Payment method</div>
     <div class="payment-option"><img src="https://i.postimg.cc/1n0s66y7/paypal.png" alt="PayPal"><label>PayPal</label><input type="radio" name="paymethod" checked></div>
-    <div class="payment-option"><img src="https://i.postimg.cc/47vsttXF/card.png" alt="Tarjeta"><label>Tarjeta Crédito/Débito</label><input type="radio" name="paymethod"></div>
+    <div class="payment-option"><img src="https://i.postimg.cc/47vsttXF/card.png" alt="Tarjeta"><label>Credit/Debit Card</label><input type="radio" name="paymethod"></div>
     <div class="payment-option"><img src="https://i.postimg.cc/5Y5bvvfg/applepay.png" alt="Apple Pay"><label>Apple Pay</label><input type="radio" name="paymethod"></div>
     <div style="text-align:right;font-weight:700;margin-top:12px;">Total: USD <span id="summaryTotal"></span></div>
-    <button class="btn" id="payNowBtn" style="margin-top:10px;">Pagar ahora</button>
+    <button class="btn" id="payNowBtn" style="margin-top:10px;">Pay now</button>
   </div>
 </div>
 
@@ -212,9 +214,9 @@
     el.classList.add('selected');
     currentCoins = parseInt(el.dataset.coins||'0',10);
     currentPrice = parseFloat(el.dataset.price||'0');
-    selectedCoinsLabel.textContent = currentCoins + " Monedas";
+    selectedCoinsLabel.textContent = currentCoins + " Coins";
     selectedPrice.textContent = fmt(currentPrice);
-    buyBtn.innerHTML = `<img src="https://i.postimg.cc/2bdrvvCH/moneda.webp" style="width:18px;vertical-align:middle;margin-right:6px;">Comprar por USD ${fmt(currentPrice)}`;
+    buyBtn.innerHTML = `<img src="https://i.postimg.cc/2bdrvvCH/moneda.webp" style="width:18px;vertical-align:middle;margin-right:6px;">Buy from USD ${fmt(currentPrice)}`;
   }
   // inicial
   setSelected(optionEls[0]);
@@ -269,7 +271,7 @@
     const coins = parseInt(enteredCoins || "0",10);
     if(!coins || coins <= 0){ customScreen.style.display="none"; return; }
     const price = coins * RATE;
-    selectedCoinsLabel.textContent = coins + " Monedas";
+    selectedCoinsLabel.textContent = coins + " Coins";
     selectedPrice.textContent = fmt(price);
     buyBtn.innerHTML = `<img src="https://i.postimg.cc/2bdrvvCH/moneda.webp" style="width:18px;vertical-align:middle;margin-right:6px;">Comprar por USD ${fmt(price)}`;
     currentCoins = coins; currentPrice = price;
