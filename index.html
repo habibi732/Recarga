@@ -80,12 +80,19 @@
     .container-inner{padding:12px;}
     .opt .coins img{width:22px;height:22px;}
   }
+    h1 span {
+    font-weight: normal; /* el texto del span sin negrita */
+    color: gray;         /* (opcional) cambia el color para diferenciarlo */
+    font-size: 18px;     /* (opcional) lo haces un poco más pequeño */
+    margin-left: 8px;    /* agrega espacio entre el título y el texto */
+  }
+
 </style>
 </head>
 <body>
 <div class="app" id="app">
   <header>
-    <h1>Get Coins </h1>
+    <h1>Get Coins <span>For Galaxies You Send it!</span> </h1>
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Write a name..." />
       <button id="searchBtn">Look for</button>
